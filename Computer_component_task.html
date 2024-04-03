@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Computer_component_task.css" />
+    <title>Computer Component order form</title>
+</head>
+<body>
+<div id="main_container">
+<H1>Computer Component Order Form</H1>
+<h3>Contact Information</h3>
+
+<div id="blackout">
+    <div id="output">
+        <label class="outputInfo" id="date"></label><br><br>
+        <label class="outputInfo" id="firstName"></label><br>
+        <label class="outputInfo" id="surname"></label><br>
+        <label class="outputInfo" id="contact-number"></label><br>
+        <label class="outputInfo" id="email"></label><br>
+        <br>
+        <div style="background-color: black; height: 1px; width: 100%;"></div>
+        <br>
+        <label class="outputInfo" id="order">Order:</label>
+        <br>
+        <ul id="orderOutputList"></ul>
+        <label id="total"></label>
+        <br><br>
+        <div id="outputButtons">
+            <button type="button" id="confirm">Confirm</button>    
+            <button type="button" id="cancel">Cancel</button>
+        </div>
+        <div class="outputInfo" id="submitOrderList"></div>
+    </div>
+</div>
+
+<div id="contactDiv">
+    <label>Name:</label><br>
+    <div id="firstlast">
+        <div id="nDiv">
+            <div class="error" id="nError">Please input name.</div>
+            <input type="text" placeholder="Firstname" id="fInput">
+
+        </div>
+        <div id="sDiv">
+           <div class="error" id="sError">Please input surname.</div>
+           <input type="text" placeholder="Surname" id="sInput">
+        </div>
+    </div>
+    <br><label>Phone Number:</label><br>
+        <div id="tDiv">
+            <div class="error" id="tError">Please input a valid contact number.</div>
+            <input type="tel" placeholder="10 Digits" id="tInput">
+        </div>
+    <br><label>Email:</label><br> 
+        <div id="eDiv">
+            <div class="error" id="eError">Please input email.</div>
+            <input type="email" id="eInput">
+        </div>
+</div>
+<h3>Please add the component(s) to be ordered</h3>
+<div id="order-error">
+</div>
+<div id="cOrder">
+    <label>Search:</label>
+    <div id="cInputDiv">
+        <div class="error" id="cError">Please add a component.</div>
+        <div>
+            <input type="text" placeholder="e.g. AMD Ryzen 5600x" id="cInput" style="width: 100%;" oninput="searchComponent(this.value)">
+            <select id="searchOutput"></select>
+        </div>
+    </div>  
+    <label>Quantity:</label>
+    <div id="nInputDiv">
+        <div class="error" id="qError">Cannot be less than one.</div>
+        <input type="number" id="nInput" value="1" min="1" style="max-width:100%;">
+    </div>
+    <button type="button" id="addButton">Add</button>
+</div>
+
+<h3>Order Review</h3>
+<div>
+    <label>Order:</label>
+    <ul id="orderList">
+    </ul>
+</div>
+<div id="submitDiv">
+    <div class="error" id="listError">Order is empty.</div>
+    <button type="button" id="submit">Submit</button>
+</div>
+</div>
+<script src="Computer_component_task.js"></script>
+</body>
+</html>

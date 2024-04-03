@@ -1,0 +1,287 @@
+html {
+    background-color:bisque;
+}
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(51, 51, 51);
+}
+#main_container {
+    max-width: 80%;
+    max-height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(252, 249, 255);
+    padding: 1.26rem 3.15rem 1.26rem 3.15rem;
+}
+h1 {
+    text-align: center;
+    margin: 0px 0px 1.26rem 0px;
+}
+h3 {
+    font-weight: bold;
+    font-size: 1.563rem;
+}
+button {
+    font-size: 1.125rem;
+    color: white;
+    background-color: rgb(20, 20, 20);
+    border-style: solid;
+    border-radius: 3px;
+    padding: 0.25rem 0.438rem;
+    transition: 0.3s;
+}
+button:hover {
+    color: black;
+    background-color: rgb(245, 219, 133);
+    border-color: rgb(245, 219, 133);
+}
+#cancel {
+    background-color: rgb(255, 0, 0);
+    border-color: rgb(255, 0, 0);
+}
+#cancel:hover {
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(145, 145, 145);
+}
+button:active {
+    scale: 70%;
+}
+label {
+    font-size: 1.26rem;
+}
+input {
+    margin: 0.625rem 0px 0.625rem 0px;
+    font-size: 1.125rem;
+    padding: 0.5rem;
+    border-color: darkturquoise;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: white;
+}
+#tInput,#eInput{
+    width: 100%;
+}
+#firstlast {
+    justify-content: space-between;
+    display: flex;
+}
+#nDiv, #sDiv{
+    width: 49%;
+}
+#sInput,#fInput {
+    width: 100%;
+}
+#cOrder {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+#nInputDiv {
+    width: 7%;
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+}
+#cInputDiv {
+    width: 80%;
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+}
+#addButton {
+    margin-right: 0.35rem;
+}
+img {
+    width: 1.438rem;
+    height: 1.438rem;
+}
+li {
+    padding-bottom: 0.188rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.26rem;
+}
+#orderList {
+    padding: 0;
+}
+#dynamicName {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 61%;
+}
+#dynamicQuanity {
+    width: 20%;
+}
+#removeID {
+    padding-left: 1.188rem;
+}
+#contactDiv, #submitDiv {
+    position: relative;
+}
+.error {
+    display: none;
+    position: absolute;
+    background-color: red;
+    color: white;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: red;
+}
+#cError {
+    top: -1.26rem;
+}
+#qError {
+    top: -2.32rem;
+}
+#nError {
+    left: 4.3rem;
+    top: -0.125rem;
+}
+#sError {
+    top: -0.125rem;
+}
+#tError {
+    left: 9.3rem;
+    top: 6.25rem;
+}
+#eError {
+    left: 4rem;
+    top: 12.4rem;
+}
+#listError {
+    top: -1.75rem;
+}
+#blackout {
+    display: none;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+#output {
+    padding: 1.875rem 3.75rem;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    right: 15%;
+    border-radius:5px;
+    background-color: beige;
+}
+.outputInfo {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#orderOutputList {
+    padding-left: 0;
+}
+#date {
+    position: relative; 
+    right: 0;
+}
+#outputButtons {
+    display: flex;
+    justify-content: space-between;
+}
+#searchOutput {
+    max-height: 12rem;
+    top: 3.56rem;
+    display: none;
+    background-color:rgb(255, 255, 255);
+    border-radius: 3px ;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0rem 1rem;
+    position: absolute;
+    z-index: 1;
+}
+@media screen and (max-width: 600px) { 
+    h1 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    label {
+        font-size: 1.1rem;
+    }
+    #dynamicName {
+        width: 45% !important; 
+    }
+    #outputButtons {
+        display: grid;
+        justify-content: center;
+    }
+    #confirm,#cancel {
+        margin-top: .4rem;
+    }
+}
+@media screen and (max-width: 840px) {
+    #searchOutput {
+        top: 0;
+        position: relative;
+    }
+    #nDiv, #sDiv{
+        width: 100%;
+    }
+    #firstlast {
+        display: block;
+    }
+    #cOrder {
+        position: relative;
+        display: block;
+    }
+    #nInputDiv {
+        width: auto;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    #nInput {
+        width: 3rem;
+    }
+    #cInputDiv {
+        padding-bottom: 1.2rem;
+        width: auto;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    .error {
+        position: relative;
+        max-width:max-content;
+    }
+    #cError {
+        top: 0;
+    }
+    #qError {
+        top: 0;
+    }
+    #nError {
+        top: 0;
+        left: 0;
+    }
+    #sError {
+        top: 0;
+        left: 0;
+    }
+    #tError {
+        top: 0;
+        left: 0;    
+    }
+    #eError {
+        top: 0;
+        left: 0;
+    }
+    #listError {
+        position: absolute;
+        top: -2rem;
+        margin-bottom: .5rem;
+    }
+    #dynamicName {
+        width: 51%;
+    }
+}

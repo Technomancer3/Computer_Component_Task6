@@ -1,0 +1,11 @@
+{
+  "name": "computer-component-task",
+  "version": "1.0.0",
+  "description": "Web application development task 6.",
+  "main": "Computer_component_task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lukas Conradie",
+  "license": "ISC"
+}
