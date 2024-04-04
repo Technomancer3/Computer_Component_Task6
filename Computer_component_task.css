@@ -91,15 +91,15 @@ input {
     margin-right: 0.35rem;
 }
 img {
-    width: 1.438rem;
-    height: 1.438rem;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 li {
     padding-bottom: 0.188rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.26rem;
+    font-size: 0.96rem;
 }
 #orderList {
     padding: 0;
@@ -230,9 +230,6 @@ li {
     }
 }
 @media screen and (max-width: 840px) {
-    li {
-        font-size: 0.96rem;
-    }
     #output {
         padding: 16px;
     }
