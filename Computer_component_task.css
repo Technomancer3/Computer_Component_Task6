@@ -98,20 +98,23 @@ li {
     padding-bottom: 0.188rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1.26rem;
 }
 #orderList {
     padding: 0;
 }
 #dynamicName {
+    margin-top: 0;
+    margin-bottom: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 61%;
+    width: 70%;
 }
-#dynamicQuanity {
-    width: 20%;
+#dynamicQuantity {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #removeID {
     padding-left: 1.188rem;
@@ -175,8 +178,12 @@ li {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    font-size: 1.2rem;
+    margin: 0 !important;
 }
 #orderOutputList {
+    max-height: 15rem;
+    overflow: scroll;
     padding-left: 0;
 }
 #date {
@@ -188,9 +195,10 @@ li {
     justify-content: space-between;
 }
 #searchOutput {
+    width: 58%;
     max-height: 12rem;
     top: 3.56rem;
-    display: none;
+    display: block;
     background-color:rgb(255, 255, 255);
     border-radius: 3px ;
     border-color: black;
@@ -211,7 +219,7 @@ li {
         font-size: 1.1rem;
     }
     #dynamicName {
-        width: 45% !important; 
+        width: 55% !important; 
     }
     #outputButtons {
         display: grid;
@@ -222,8 +230,18 @@ li {
     }
 }
 @media screen and (max-width: 840px) {
+    li {
+        font-size: 0.96rem;
+    }
+    #output {
+        padding: 16px;
+    }
+    #main_container {
+        padding: 16px;
+    }
     #searchOutput {
         top: 0;
+        width: 100%;
         position: relative;
     }
     #nDiv, #sDiv{
@@ -282,6 +300,6 @@ li {
         margin-bottom: .5rem;
     }
     #dynamicName {
-        width: 51%;
+        width: 65%;
     }
 }

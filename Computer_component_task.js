@@ -37,8 +37,11 @@ const componentDatabaseSample =
 const arrayComponents = [];
 let listID = 0;
 
+window.onload = (function(){
+ searchComponent('');
+})();
+
 function searchComponent(input) {
-    document.getElementById("searchOutput").style.display = 'block';
     document.getElementById("searchOutput").innerHTML = "";
     
     const filteredComponents = componentDatabaseSample.filter(component => {
